@@ -79,7 +79,7 @@ const Dracula = new humanoid("999", "Dracula", ["sunlight", "wood"], [46, 25], 1
 const monsterList = [Dracula.name, Chupaleco.name, Jerry.name]
 
 const sorted = monsterList.sort()
-console.log(sorted);
-//console.log(Dracula.name);
+//console.log(sorted);
+console.log(Dracula.name);
 
 
