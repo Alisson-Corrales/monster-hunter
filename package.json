@@ -1,8 +1,26 @@
 {
   "dependencies": {
+    "init": "^0.1.2",
     "typescript": "^4.5.5"
   },
   "devDependencies": {
     "jsdoc": "^3.6.10"
-  }
+  },
+  "name": "monster-hunter",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alisson-Corrales/monster-hunter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alisson-Corrales/monster-hunter/issues"
+  },
+  "homepage": "https://github.com/Alisson-Corrales/monster-hunter#readme"
 }

@@ -56,7 +56,8 @@ function validate(input: Validatable): boolean {
   return isValid;
 }
 
-function Autobind(_: any, _2: any, desc: PropertyDescriptor) {
+function Autobind(_: any, _2: any, desc: 
+) {
   const originalMethod = desc.value;
   const newMethod: PropertyDescriptor = {
     get() {
