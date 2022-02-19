@@ -112,6 +112,20 @@ console.log(genMonster.getMonName());
 */
 
 abstract class genMonster {
+  //stores the names from monsters
+  static takenNames: string[] = []
+  static getTakenNames() : string[] {
+    this.takenNames.sort()
+    return this.takenNames
+  }
+
+  //stores the names from monsters
+  /*static taken: [] = []
+  static getTakenNames() : string[] {
+    this.takenNames.sort()
+    return this.takenNames
+  }*/
+
   constructor(
     public id: string,
     public name: string,
@@ -148,8 +162,17 @@ abstract class genMonster {
 }
 
 class ghost extends genMonster {
+    //stores the names from monsters
+    static takenStats: any = []
+    static getTakenStats() {
+      this.takenStats.sort()
+      return this.takenStats
+    }
+
   constructor(id: string, name: string, weaknesses: string[], location: string, challenge: number, mortality: boolean, safety: number, public type: string, public signs: string[]) {
     super(id, name, weaknesses, location, challenge, mortality, safety);
+    ghost.takenNames.push(name)
+    ghost.takenStats.push(challenge, mortality, safety, signs)
   }
   get info() {
     return console.log(this.name, this.type, this.signs);
@@ -163,9 +186,21 @@ let ghostlist = [Jerry, Patricia, Lola];
 
 
 class beast extends genMonster {
+  //stores the names from monsters
+  static takenStats: any = []
+  static getTakenStats() {
+    this.takenStats.sort()
+    return this.takenStats
+  }
+
   constructor(id: string, name: string, weaknesses: string[], location: string, challenge: number, mortality: boolean, safety: number,  public habitat: string, public defensives: string[]){
     super(id, name, weaknesses, location, challenge, mortality, safety)
+    beast.takenNames.push(name)
+    beast.takenStats.push(challenge, mortality, safety, habitat, defensives)
   }
+
+
+
   get beastInfo() {
     return this.habitat, this.defensives
   }
@@ -187,8 +222,17 @@ enum compliance {
 }
 
 class humanoid extends genMonster {
+    //stores the names from monsters
+    static takenStats: any = []
+    static getTakenStats() {
+      this.takenStats.sort()
+      return this.takenStats
+    }
+
   constructor(id: string, name: string, weaknesses: string[], location: string, challenge: number, mortality: boolean, safety: number,  public humanness: number, public compliance: compliance){
     super(id, name, weaknesses, location, challenge, mortality, safety);
+    humanoid.takenNames.push(name)
+    humanoid.takenStats.push(challenge, mortality, safety, humanness, compliance)
   }
   set valueHumany(n: number) {
     if(n >= 0 && n <= 10){
@@ -214,7 +258,8 @@ class organize extends genMonster{
     return this.name
   }
 }
-console.log(organize.getNames());
+//console.log(genMonster.getTakenNames());
+console.log(ghost.getTakenStats());
 //logs the name organize
 //need it to log the names of the monsters
 
